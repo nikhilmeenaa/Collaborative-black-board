@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./joinBox.css">
+</head>
+
+<body>
+    <div class="header">
+    
+    <div id="FIRST">
+        <div id = "penthings">
+            <button class="drawing hover" id = "pencil" onclick="panToggle(modes.drawing)">
+                <img src="./anotherPen.png" alt="">
+            </button>
+            
+            <div class="eraserContainer">
+
+                <button id = "penToggleButton" onClick = penSizeToggle()>
+                    Size
+                </button>
+
+                <button class="penSize hover" onclick="penSize(1)">
+                    <img src="penSIze.png" id="eraser1" alt="">
+                </button>
+            
+                <button class="penSize hover" onclick="penSize(2)">
+                    <img src="penSIze.png" id="eraser2" alt="">
+                </button>
+            
+                <button class="penSize hover" onclick="penSize(3)">
+                    <img src="penSIze.png" id="eraser3" alt="">
+                </button>
+            
+                <button class="penSize hover" onclick="penSize(4)">
+                    <img src="penSIze.png" id="eraser4" alt="">
+                </button>
+            
+                <button class="penSize hover" onclick="penSize(5)">
+                    <img src="penSIze.png" id="eraser5" alt="">
+                </button>
+            </div>
+        </div>
+
+        <div id="eraserthings">
+            <button class="rubber hover" id="eraser" onclick="panToggle(modes.eraser)">
+                <img src="/eraser.png" alt="">
+            </button>
+    
+            <div class="eraserContainer">
+                <button id = "eraserToggleButton" onClick=eraserSizeToggle()>
+                    Size
+                </button>
+
+                <button class="rubber hover" onclick="panToggle(modes.a1)">
+                    <img src="new-moon.png" id="eraser1" alt="">
+                </button>
+    
+                <button class="rubber hover" onclick="panToggle(modes.a2)">
+                    <img src="new-moon.png" id="eraser2" alt="">
+                </button>
+    
+                <button class="rubber hover" onclick="panToggle(modes.a3)">
+                    <img src="new-moon.png" id="eraser3" alt="">
+                </button>
+    
+                <button class="rubber hover" onclick="panToggle(modes.a4)">
+                    <img src="new-moon.png" id="eraser4" alt="">
+                </button>
+    
+                <button class="rubber hover" onclick="panToggle(modes.a5)">
+                    <img src="new-moon.png" id="eraser5" alt="">
+                </button>
+            </div>
+        </div>
+    
+            <div class = "" id="redoUndo" >
+                <button>
+                    <img src="undo.png" alt="" onclick="doUndo()">
+                </button>
+                <button>
+                    <img src="redo.png" alt="" onclick="doRedo()">
+                </button>
+            </div>
+
+            <div class="colorPickerDiv">
+                <input type="color" id="colorPicker" value="#FF3399">
+            </div>
+
+    </div>
+        <!-- <button onclick="panToggle(modes.pan)" class="hover">
+            <img src="./hold.png" alt="">
+        </button> -->
+
+
+        <!-- <button onclick="panToggle(modes.default)" class="hover">
+            <img src="/cursor.png" alt="">
+        </button> -->
+
+
+    <div id="SECOND">
+
+    
+        <!-- <div class="hover">
+            <button id = "saveButton" onclick="saveState()">Save</button>
+        </div>
+    
+        <div class="hover">
+            <button id= "loadButton" onclick="loadCanvasData()">Load</button>
+        </div> -->
+    
+        <div class="hover" id = "loadButtonDiv">
+            <button id="loadButton" onclick="clearCanvas()">Clear</button>
+        </div>
+    
+        <div class="roomName" id="createBox">
+            <button id="createButton" onclick="openCreateFacility()">Create Room</button>
+            <div id="createdRoomId"></div>
+        </div>
+    
+        <button onclick = "copyToClipboard()" id = "copyButton">
+            Copy
+        </button>
+
+        <div class = "hover roomName" id = "joinBox">
+            <!-- <input type="text" id = "roomName" placeholder="Enter Room ..."> -->
+            <button id = "joinRoom" onclick="openJoinFacility()">Join</button>
+        </div>
+    </div>
+
+
+        <!-- 
+        <div class="hover">
+            <button id="addButton" onclick="add()">Add</button>
+        </div> -->
+
+        <!-- <div class="hover">
+            <button id="loadButton" onclick="saveBgImage()">Img</button>
+        </div>
+
+        <div class="hover">
+            <button id="loadButton" onclick="saveBgRImage()">Rmg</button>
+        </div> -->
+
+        <!-- <div class="hover">
+            <input type="color" id="bgColorPicker" value="#FFFFFF">
+        </div> -->
+
+    </div>
+
+    <button id = "upAndDownButton" onclick="hideSecond()">
+        <img src="./up-and-down-arrow.png" alt="">
+    </button>
+    
+    <canvas id="canvas"></canvas>
+    
+
+
+
+    <div class="wholeJoinBox" id = "createFacility" onclick = "decide(event)">
+        <div class="mainJoinBox">
+            <input id = "createUserName" class = "createUserNameValue"  type="text" placeholder="username">
+            <button onclick="createRoom()" >Create Room</button>
+        </div>
+    </div>
+
+    <div class="wholeJoinBox joinFacility" id = "joinFacility" onclick = "decide(event)">
+        <div class="mainJoinBox">
+            <input id="joinUserName" class = "joinUserNameValue" type="text" placeholder="username">
+            <input id = "roomid" type="text" placeholder="RoomId">
+            <button onclick = joinUser()>Join</button>
+        </div>
+    </div>
+
+    <div class="usersButton"  onclick = "userPageToggle()">
+        <img src="./group.png" alt="">
+    </div>
+
+    <div class="usersPage" id = "usersPageID">
+        <div class="noOneIsHere">
+            No One is Here 🙂
+        </div>
+    </div>
+
+    <div class="userDisconnected" id = "disconnectBox">
+        <div>
+            <span id = "disconnectedUserName"> Nikhil </span>
+            <span id = "joinOrLeft"> left </span>
+        </div>
+    </div>
+
+
+
+    <div id="footer">Made with ❤️ by Nikhil Meena</div>
+
+
+
+
+</body>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/2.4.4/fabric.min.js"></script>
+<script src="socket.io.js"></script>
+<script src="app.js"></script>
+
+</html>

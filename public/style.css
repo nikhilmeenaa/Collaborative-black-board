@@ -1,0 +1,785 @@
+body {
+    background-color: black;
+}
+
+* {
+    overflow: hidden
+}
+
+img {
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+
+
+html,
+body {
+    overflow: hidden;
+    background-color: rgb(16, 15, 15);
+}
+
+@media screen {
+    body>div#header {
+        position: fixed;
+    }
+
+    body>div#footer {
+        position: fixed;
+    }
+}
+
+/* $blue: #3498db
+$green: #1abc9c
+$red: #c0392b
+$stone: #bdc3c7
+$slate: darken($stone, 50)
+$yellow: #f1c40f */
+
+html {
+    /* overflow-x: scroll; */
+    overflow-y: scroll;
+}
+
+
+#pencil {
+    margin-left : 10px;
+}
+
+/* header div img::c */
+
+.header {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+    /* border : 1px solid red; */
+    /* background-color: rgb(50, 49, 49); */
+    /* background-color: transparent; */
+    display: flex;
+    /* height: 63px; */
+    /* height : 10vh; */
+    align-items:flex-start;
+    z-index: 2;
+    justify-content: center;
+    /* background-color: black; */
+}
+
+.header>div {
+    /* margin: 1.5vh; */
+    padding: 10px;
+    /* border-radius: 4px; */
+    /* border : 1px solid red; */
+}
+
+.hover:hover {
+    background-color: rgb(65, 64, 64);
+    border-radius: 7px;
+}
+
+div input {
+    height: 40px;
+    width: 40px;
+}
+
+#penthings
+{
+    display : flex;
+    /* align-items: center; */
+    align-items: flex-start;
+    justify-content: center;
+    /* border: 1px solid white; */
+    border-radius: 10px;
+}
+
+#eraserthings
+{
+    /* border : 1px solid red; */
+    margin-left : 20px;
+    display : flex;
+    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
+    /* border : 1px solid white; */
+    border-radius: 10px;
+    /* margin-right : 10px; */
+}
+
+.header button {
+    height: 50px;
+    width: 40px;
+    /* margin:1vh; */
+
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    /* border : 1px solid white; */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header>button {
+    margin: 10px;
+}
+
+.header img {
+    background-color: transparent;
+    height: 40px;
+}
+
+.slidecontainer input {
+    /* border: 1px solid white; */
+    width: 100px;
+    color: red;
+}
+
+.eraserContainer {
+    margin-left : 0.5vh;
+    display: flex;
+    align-items: center;
+    /* align-items: ce;/ */
+    justify-content: center;
+    /* border : 1px solid red; */
+    flex-direction : column;
+    margin-right : 10px;
+    padding: 0;
+    /* margin-right : -5px; */
+}
+
+
+#eraser1 {
+    height: 10px;
+}
+
+#eraser2 {
+    height: 15px;
+}
+
+#eraser3 {
+    height: 20px;
+}
+
+#eraser4 {
+    height: 25px;
+}
+
+#eraser5 {
+    height: 30px;
+    /* width : 50px; */
+    /* border : 1px solid white; */
+}
+
+#penSize {
+    color: white;
+    background-color: black;
+    /* height: 10vh; */
+    /* padding: 0.5vh; */
+    /* border : 1px solid white; */
+    font-size: large;
+}
+
+
+#redoUndo {
+    width: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: flex-start;
+    margin-left : 15px;
+    /* border : 1px solid blue; */
+}
+
+#redoUndo button
+{
+    border-radius : 7px;
+}
+
+#redoUndo button:hover {
+    background-color:rgb(65, 64, 64);
+}
+
+#canvas
+{
+    /* border : 1px solid red; */
+}
+
+
+#saveButton {
+    /* background-color: rgb(77, 66, 66); */
+    font-size: large;
+    /* width: 150px, */
+    /* height: 35px, */
+}
+
+#loadButton
+{
+    font-size : large;
+    width : 60px;
+    height : 40px;
+    border : 1px solid rgb(182, 173, 173);
+    border-radius : 5px;
+}
+
+#loadButton:hover
+{
+    background-color: rgb(42, 31, 31);
+}
+
+#addButton
+{
+    font-size : large;
+}
+
+
+#joinBox
+{
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid rgb(182, 173, 173); */
+    /* border : 1px solid white; */
+}
+
+#joinBox:hover
+{
+    background-color: transparent;
+}
+
+#joinBox input 
+{
+    margin-left : 5px;
+    margin-right : 10px;
+    width : 150px;
+    text-align: center;
+    border : 5px;
+    height : 35px;
+    background-color: black;
+    /* border : none; */
+    border-radius : 8px;
+    color : white;
+    font-size: large;
+}
+
+
+#joinBox input:focus
+{
+    outline: none;
+}
+
+#joinBox button 
+{
+    /* border : 1px solid rgb(71, 69, 69); */
+    border: 1px solid rgb(182, 173, 173);
+    height : 40px;
+    margin-right : 5px;
+    font-size : large;
+    width : 60px;
+    border-radius: 2px;
+    border-radius : 10px;
+}
+
+#joinBox button:hover
+{
+    background-color: rgb(42, 31, 31);
+}
+
+
+#createBox
+{
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    color : white;
+    font-size: large;
+    /* width : 220px; */
+}
+
+#createBox div
+{
+    /* height : 40px; */
+    margin-left : 10px;
+    display : none;
+    padding-left : 5px;
+    padding-right: 5px;
+    text-align : center;
+}
+
+#createButton
+{
+    font-size : large;
+    width : 140px;
+    height : 40px;
+    margin-left: 10px;
+    margin-right : 10px;
+    padding : 2px;
+    /* display: none; */
+    border-radius : 5px;
+    border: 1px solid rgb(182, 173, 173);
+}
+
+#createButton:hover
+{
+    background-color: rgb(42, 31, 31);
+}
+
+
+
+.displayNone
+{
+    display: none;
+    /* visibility: hidden; */
+    /* border : 1px solid red; */
+}
+
+
+#copyButton
+{
+    /* border : 1px solid rgb(133, 131, 131); */
+    height : 35px;
+    width : 65px;
+    border-radius: 5px;
+    font-size : large;
+    display : none;
+    color: rgb(176, 166, 166);
+}
+
+#copyButton:hover
+{
+    background-color: rgb(188, 183, 183);
+    color : black;
+}
+
+#footer
+{
+    color : rgb(186, 182, 182);
+    position : fixed;
+    /* border : 1px solid white; */
+    /* background-color: black; */
+    text-align: center;
+    bottom : 3px;
+    left : 0;
+    right : 0;
+    z-index: 7;
+}
+
+
+#FIRST
+{
+    /* border : 1px solid red; */
+    display : flex;
+    align-items: center;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#SECOND
+{
+    /* border : 1px solid red; */
+    display : flex;
+    align-items : center;
+    justify-content : space-between;
+    width : auto;
+}
+
+#colorPicker
+{
+    margin-left : 10px ;
+    margin-right : 10px ;
+}
+
+
+#eraser
+{
+    margin-left : 10px;
+}
+
+/* #eraser5 { */
+    /* margin-right: 10px; */
+/* } */
+
+
+
+
+
+
+
+
+
+
+
+/* UPDATE */
+.eraserContainer .penSize
+{
+    display : none;
+    width : 30px;
+}
+
+.eraserContainer .rubber
+{
+    display : none;
+    /* border : 1px solid white; */
+    width : 30px;
+}
+
+
+#penToggleButton
+{
+    font-size : large;
+    border : 1px solid rgb(119, 115, 115);
+    border-radius : 7px;
+    margin-left : 5px;
+    width : 50px;
+}
+
+#penToggleButton:hover {
+    background-color: black;
+}
+
+#eraserToggleButton
+{
+    font-size: large;
+    border: 1px solid rgb(119, 115, 115);
+    border-radius: 7px;
+    margin-left: 5px;
+    width : 50px;
+}
+
+#eraserToggleButton:hover
+{
+    background-color: black;
+}
+
+
+
+#penthings
+{
+    /* border : 1px solid red; */
+}
+
+#eraserthings
+{
+    margin-left : 5px;
+    /* border : 1px solid white; */
+}
+
+
+#redoUndo
+{
+    /* border : 1px solid white; */
+    margin-right : 15px;
+}
+
+#joinBox input
+{
+    border : 1px solid white;
+    margin-right : 15px;
+}
+
+
+#upAndDownButton
+{
+    display : none;
+}
+
+
+.mainJoinBox input 
+{
+    width : 220px;
+}
+
+
+.joinFacility {
+    display: none;
+ }
+
+.createFacility {
+    display: none;
+    /* border : 3px solid red; */
+ }
+
+
+.usersButton {
+    height: 25px;
+    width: 25px;
+    z-index: 11;
+    bottom : 0;
+}
+
+
+
+
+@media only screen and (max-width : 960px)  {
+
+    .header 
+    {
+        display : flex;
+        align-items: center;
+        justify-content: center;
+        /* border : 1px solid cyan; */
+        height:auto;
+        /* flex-direction: row; */
+    }
+
+    #FIRST
+    {
+        /* border : 1px solid white; */
+        margin-right : 6px;
+
+    }
+
+    #SECOND
+    {
+        /* border: 0px solid red; */
+        /* width : 300px; */
+    }
+
+    .header
+    {
+        flex-direction: column;
+        height : auto;
+    }
+
+    .header img {
+        background-color: transparent;
+        height: 30px;
+    }
+    #eraser1 {
+        height: 8px;
+    }
+
+    #eraser2 {
+        height: 12px;
+    }
+
+    #eraser3 {
+        height: 15px;
+    }
+
+    #eraser4 {
+        height: 18px;
+    }
+
+    #eraser5 {
+        height: 21px;
+    }
+
+    div input {
+        height: 30px;
+        width: 30px;
+        margin-right : 0;
+    }
+
+    #header button 
+    {
+        height : 20px;
+    }
+
+    #eraserthings {
+        margin-left : 0;
+        /* border:0px solid transparent; */
+    }
+
+    #penthings
+    {
+        /* border : 1px solid white; */
+        margin-left : 0;
+        margin-right: 3px;
+    }
+
+    /* #eraserthings { */
+        /* border: 1px solid white; */
+        /* margin-left: 8px; */
+    /* } */
+
+    #pencil
+    {
+        margin-left : 0px;
+    }
+    #eraser 
+    {
+        margin-left : 0px;
+    }
+
+    .eraserContainer
+    {
+        margin-right:5px;
+    }
+
+    .eraserContainer button 
+    {
+        width : 18px;
+    }
+
+    #redoUndo
+    {
+        margin-left : 7px;
+        margin-right :10px;
+        width : 50px;
+    }
+
+    #redoUndo img
+    {
+        height : 25px;
+    }
+
+    #SECOND
+    {
+        width : 280px;
+        border : 1px solid rgb(86, 84, 84);
+        border-radius : 5px;
+    }
+
+    #colorPicker
+    {
+        margin-top : 4px;
+        margin-left : 5px;
+        margin-right : 0;
+    }
+    #loadButton
+    {
+        font-size : 16px;
+        width : 50px;
+        padding:0;
+        height : 30px;
+        margin-left : 0;
+        border-radius: 5px;
+    }
+    #loadButtonDiv
+    {
+        padding : 0;
+        margin-left : 0;
+        margin-right : 0;
+        border-radius: 5px;
+        border : 1px solid rgb(97, 94, 94);
+    }
+
+
+    #createBox div
+    {
+        padding : 0;
+        /* border : 1px solid white; */
+        margin-right : 5px;
+        margin-left: 5px;
+        width : 100px;
+        /* margin-left : 0; */
+    }
+
+    #createButton
+    {
+        height : 35px;
+        font-size: 15px;
+        width : 105px;
+        margin-left : 0;
+        margin-right : 0;
+    }
+
+    #joinBox input 
+    {
+        margin-left : 0;
+        width : 80px;
+        font-size : 15px;
+        font-size : 15px ;
+        height : 30px;
+        padding-left: 5px;
+    }
+
+    #joinBox button
+    {
+        font-size : 15px;
+        padding : 0;
+        height : 35px;
+        width : 45px;
+        border-radius : 7px;
+    }
+
+    #footer
+    {
+        color : rgb(184, 184, 184);
+        bottom : 5px;
+    }
+    #SECOND
+    {
+        /* border: 1px solid red; */
+    }
+
+    .colorPickerDiv
+    {
+        /* border : 1px solid white; */
+        margin-top : 6px;
+        margin-left : 0;
+        margin-right : 2px;
+    }
+
+    #xBox div {
+        height : 40px;
+        width : 130px;
+    }
+
+
+
+    #upAndDownButton
+    {
+        display : inline;
+        /* border : 1px solid red; */
+        background-color: white;;
+        z-index : 5;
+        position : fixed;
+        top : 135px;
+        width : 20px;
+        height : 25px;
+        padding : 0;
+        border : none;
+        border-radius : 5px;
+        background-color: black;
+        border : 1px solid rgb(56, 54, 54);
+    }
+
+    #upAndDownButton img
+    {
+        height : 100%;
+        width : 100%;
+        border-radius: 5px;
+        /* border: 1px solid rgb(48, 47, 47); */
+        background-color : black;
+        
+    }
+
+    #createBox div
+    {
+        margin-left : 10px;
+    }
+
+    #penToggleButton
+    {
+        height : 35px;
+        margin-top : 10px;
+    }
+
+    #eraserToggleButton
+    {
+        height: 35px;
+        margin-top: 10px;
+    }
+
+
+    .usersButton
+    {
+        height : 25px;
+        width : 25px;
+    }
+
+
+
+
+
+
+
+}
+
+

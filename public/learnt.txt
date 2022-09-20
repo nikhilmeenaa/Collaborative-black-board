@@ -1,0 +1,56 @@
+Reflexive Relation : 
+    All (x,x) pairs must be present in the relation.
+
+Irreflesive 
+    No (x,x) relation must be present in the relation.
+
+Symmetric Relation : 
+    if (x,y) is present in the relation, then (y,x) must be present in the relation as well.
+
+    it is applicable on relation between same set only.
+
+    Total number of symmetric relation are 
+        2^n + 2^((n^2-n)/2)
+
+AntiSymmetric Relation : 
+
+    if (x,y) is present in the relation, then (x,y) must not be present in the relation 
+    if(x == y) this does not create any problem
+
+Assymetric Relation : 
+    if (x,y) is present in the relation , then (x,y) must not be present in the relation.
+    
+    Assymetric = AntiSymmetric + irreflexive
+    
+
+Transitive Relation : 
+    if (a,b) and (b,c) are present in the relation then (a , c) must be present in the relation
+
+Equivalent Relation : 
+    A relation is said to be equivalence if it is 
+    1) Reflexive   2) Symmetric   3) Transitive
+
+
+Partial Relation : 
+    A relation is said to be equivalence if it is 
+    1) Reflexive   2) Anti-Symmetric   3) Transitive
+
+
+Study Poset set , hasse diagram
+
+
+Multisets : 
+    Sets which may contain a same element multiple number of times , the number of times is called 
+    as the muliplicity of that number.
+
+Union : Take maximum of the frequency of the each number from both the table.
+
+Intersection : Take minimum frequency of the each number from both the table.
+
+Difference : Take each number mul(A[x])-mul(A[x]) number of times a number x if 
+
+
+Summation : Totally plus of all the number present in the two sets.
+
+Cardinality of sets : Total number of distinct elements present in the set.
+
