@@ -4,7 +4,7 @@ const router = require('./routes/router.js');
 const path = require('path');
 const port = process.env.PORT || 3000;
 
-require('./Database/connect');
+// require('./Database/connect');
 
 // Socket.IO
 const http = require('http').Server(app);
