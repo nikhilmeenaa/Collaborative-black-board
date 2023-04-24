@@ -11,7 +11,7 @@ const copyButton = document.getElementById("copyButton");
 const makeCanvas = (id)=>{
     return new fabric.Canvas(id, {
       backgroundColor: "#f6f6f6",
-      height : 3 * window.innerHeight , 
+      height : 1 * window.innerHeight , 
       width : 1 * window.innerWidth , 
       selection: false, // this is for avoiding selection in canvas
       isDrawingMode : true ,
