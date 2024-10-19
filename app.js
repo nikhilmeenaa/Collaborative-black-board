@@ -3,11 +3,16 @@ const app = express();
 const router = require("./routes/router.js");
 const path = require("path");
 const port = process.env.PORT || 3000;
+const healthCheckTimeInterval = 1000 * 60 * 10;
 
 setInterval(async () => {
-  const res = await fetch("https://acetype.onrender.com/healthcheck");
-  console.log({ res });
-}, 1000 * 60 * 20);
+  try {
+    const res = await fetch("https://acetype.onrender.com/healthcheck");
+    console.log({ res });
+  } catch (err) {
+    console.log("Some error occured");
+  }
+}, healthCheckTimeInterval);
 
 // require('./Database/connect');
 
